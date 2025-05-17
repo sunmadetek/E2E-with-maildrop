@@ -1,0 +1,11 @@
+node_modules/
+.vscode/
+# no settings configured
+.DB_Store
+.idea/
+
+#Cypress generated files
+cypress/screenshots/
+cypress/videos/
+cypress/fixtures/creds.json
+cypress.env.json

@@ -1,0 +1,23 @@
+
+{
+"signupPage" : {
+    "fullNameField": "input#fullname",
+    "businessNameField": "input#businessname",
+    "businessEmailField": "input#businessemail",
+    "businessPhoneField": "input#businessphonenumber",
+    "businessRegNumField": "input#businessRegNum",
+    "button": "button",
+    "websiteField": "input#website",
+    "instagramField": "input#instagramHandle",
+    "twitterField": "input#twitterHandle",
+    "passwordField": "input#password",
+    "howYouHeardAboutUs": "div[placeholder]",
+    "HeardAboutUsList": "#scrollableDiv"
+},
+
+"loginPage": {
+    "exampleKey": "exampleValue",
+    "loginBtn": ".Header2_header__nav__btn__wRKfY> :nth-child(1) button",
+    "signUpBtn": ".Header2_header__nav__btn__wRKfY> :nth-child(2) button"
+}
+}
