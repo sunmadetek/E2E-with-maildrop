@@ -68,7 +68,7 @@ Cypress.Commands.add('how_you_heard_about_us', (text) => {
     cy.get(signup.HeardAboutUsList).contains(text).click();
 })
 
-Cypress.Commands.add('retrieve_and_insert_otp_1', () => {
+Cypress.Commands.add('retrieve_and_insert_otp', () => {
     
     cy.log(email.mailD)
     cy.wait(20000);
@@ -102,50 +102,6 @@ Cypress.Commands.add('retrieve_and_insert_otp_1', () => {
         const parser = new DOMParser()
         const doc = parser.parseFromString(emailBody, 'text/html');
         const otpCode = doc.documentElement.querySelector('center>table > tbody > tr:nth-child(2) p:nth-of-type(3)').textContent
-        const otp = otpCode.trim();
-        cy.get('input[type="tel"]').each(($el, index)=>{
-            cy.wrap($el).fill(otp[index]);
-        })
-    })
-    })
-    
-})
-
-Cypress.Commands.add('retrieve_and_insert_otp_2', () => {
-    
-    cy.log(email.mailD)
-    cy.wait(60000);
-    cy.request({
-        method: "POST",
-        url: "https://api.maildrop.cc/graphql",
-        header: {
-                "content-type": "application/json"
-        },
-        body: {
-            query: `query Example { inbox(mailbox:"${email.mailD}") { id headerfrom subject data } }`,
-            variable: ""
-        }
-    }).then((response)=>{
-      const  inboxID = response.body.data.inbox[0].id
-        cy.log(inboxID);
-
-        return cy.request({
-        method: "POST",
-        url: "https://api.maildrop.cc/graphql",
-        header: {
-                "content-type": "application/json"
-        },
-        body: {
-            query: `query Example { 
-            message(mailbox:"${email.mailD}", id:" ${inboxID}") { id headerfrom subject data html}
-             }`,
-            variable: ""
-        }
-    }).then((response)=>{
-        const emailBody = response.body.data.message.html
-        cy.log(emailBody);
-        const parser = new JSDOM(emailBody)
-        const otpCode = parser.window.document.querySelector('center>table > tbody > tr:nth-child(2) p:nth-of-type(3)').textContent
         const otp = otpCode.trim();
         cy.get('input[type="tel"]').each(($el, index)=>{
             cy.wrap($el).fill(otp[index]);

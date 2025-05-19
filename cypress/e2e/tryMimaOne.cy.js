@@ -14,7 +14,7 @@ describe('Sign up Test with various how you head about us options', () => {
         cy.fill_in_password(password);
         cy.click_button('Sign Up');
         cy.url().should('include', '/otp');
-        cy.retrieve_and_insert_otp_2();
+        cy.retrieve_and_insert_otp();
     })
 
     it('Instagram', () => {
@@ -22,7 +22,7 @@ describe('Sign up Test with various how you head about us options', () => {
         cy.fill_in_password(password);
         cy.click_button('Sign Up');
         cy.url().should('include', '/otp');
-        cy.retrieve_and_insert_otp_1()
+        cy.retrieve_and_insert_otp()
     })
 
     it('Facebook', () => {
@@ -30,7 +30,7 @@ describe('Sign up Test with various how you head about us options', () => {
         cy.fill_in_password(password);
         cy.click_button('Sign Up');
         cy.url().should('include', '/otp');
-        cy.retrieve_and_insert_otp_2()
+        cy.retrieve_and_insert_otp()
     })
 
     it('Twitter', () => {
@@ -38,7 +38,7 @@ describe('Sign up Test with various how you head about us options', () => {
         cy.fill_in_password(password);
         cy.click_button('Sign Up');
         cy.url().should('include', '/otp');
-        cy.retrieve_and_insert_otp_1()
+        cy.retrieve_and_insert_otp()
     })
 
     it('Google Search', () => {
@@ -46,7 +46,7 @@ describe('Sign up Test with various how you head about us options', () => {
         cy.fill_in_password(password);
         cy.click_button('Sign Up');
         cy.url().should('include', '/otp');
-        cy.retrieve_and_insert_otp_2()
+        cy.retrieve_and_insert_otp()
     })
 
     it('Friends & Family', () => {
@@ -54,7 +54,7 @@ describe('Sign up Test with various how you head about us options', () => {
         cy.fill_in_password(password);
         cy.click_button('Sign Up');
         cy.url().should('include', '/otp');
-        cy.retrieve_and_insert_otp_1()
+        cy.retrieve_and_insert_otp()
     })
 
     it('Mima Sales Agent', () => {
@@ -62,7 +62,7 @@ describe('Sign up Test with various how you head about us options', () => {
         cy.fill_in_password(password);
         cy.click_button('Sign Up');
         cy.url().should('include', '/otp');
-        cy.retrieve_and_insert_otp_2()
+        cy.retrieve_and_insert_otp();
     })
 
     it('Others', () => {
@@ -70,7 +70,7 @@ describe('Sign up Test with various how you head about us options', () => {
         cy.fill_in_password(password);
         cy.click_button('Sign Up');
         cy.url().should('include', '/otp');
-        cy.retrieve_and_insert_otp_1()
+        cy.retrieve_and_insert_otp();
     })
 })
 
