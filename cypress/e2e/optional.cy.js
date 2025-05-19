@@ -9,7 +9,7 @@ describe('Sign up Test with various how you head about us options', () => {
        
     })
 
-    it('business registration', () => {
+    it.only('business registration', () => {
         cy.fill_any_optional_field('business registration');
         cy.how_you_heard_about_us('Webinar/Seminar');
         cy.fill_in_password(password);
