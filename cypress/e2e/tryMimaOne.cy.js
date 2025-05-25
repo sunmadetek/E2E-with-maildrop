@@ -9,7 +9,7 @@ describe('Sign up Test with various how you head about us options', () => {
         cy.click_button('Next');
     })
 
-    it.only('Webinar/Seminar', () => {
+    it('Webinar/Seminar', () => {
         cy.how_you_heard_about_us('Webinar/Seminar');
         cy.fill_in_password(password);
         cy.click_button('Sign Up');
@@ -25,7 +25,7 @@ describe('Sign up Test with various how you head about us options', () => {
         cy.retrieve_and_insert_otp()
     })
 
-    it('Facebook', () => {
+    it.skip('Facebook', () => {
         cy.how_you_heard_about_us('Facebook');
         cy.fill_in_password(password);
         cy.click_button('Sign Up');
@@ -33,7 +33,7 @@ describe('Sign up Test with various how you head about us options', () => {
         cy.retrieve_and_insert_otp()
     })
 
-    it('Twitter', () => {
+    it.skip('Twitter', () => {
         cy.how_you_heard_about_us('Twitter');
         cy.fill_in_password(password);
         cy.click_button('Sign Up');
@@ -41,7 +41,7 @@ describe('Sign up Test with various how you head about us options', () => {
         cy.retrieve_and_insert_otp()
     })
 
-    it('Google Search', () => {
+    it.skip('Google Search', () => {
         cy.how_you_heard_about_us('Google Search');
         cy.fill_in_password(password);
         cy.click_button('Sign Up');
@@ -49,7 +49,7 @@ describe('Sign up Test with various how you head about us options', () => {
         cy.retrieve_and_insert_otp()
     })
 
-    it('Friends & Family', () => {
+    it.skip('Friends & Family', () => {
         cy.how_you_heard_about_us('Friends & Family');
         cy.fill_in_password(password);
         cy.click_button('Sign Up');
@@ -57,7 +57,7 @@ describe('Sign up Test with various how you head about us options', () => {
         cy.retrieve_and_insert_otp()
     })
 
-    it('Mima Sales Agent', () => {
+    it.skip('Mima Sales Agent', () => {
         cy.how_you_heard_about_us('Mima Sales Agent');
         cy.fill_in_password(password);
         cy.click_button('Sign Up');
@@ -65,7 +65,7 @@ describe('Sign up Test with various how you head about us options', () => {
         cy.retrieve_and_insert_otp();
     })
 
-    it('Others', () => {
+    it.skip('Others', () => {
         cy.how_you_heard_about_us('Others');
         cy.fill_in_password(password);
         cy.click_button('Sign Up');
