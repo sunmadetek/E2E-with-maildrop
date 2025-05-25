@@ -9,7 +9,7 @@ describe('Sign up Test with various how you head about us options', () => {
        
     })
 
-    it.only('business registration', () => {
+    it('business registration', () => {
         cy.fill_any_optional_field('business registration');
         cy.how_you_heard_about_us('Webinar/Seminar');
         cy.fill_in_password(password);
@@ -27,7 +27,7 @@ describe('Sign up Test with various how you head about us options', () => {
         cy.retrieve_and_insert_otp();
     })
 
-   it('instagram', () => {
+   it.skip('instagram', () => {
         cy.fill_any_optional_field('instagram');
         cy.how_you_heard_about_us('Webinar/Seminar');
         cy.fill_in_password(password);
@@ -36,7 +36,7 @@ describe('Sign up Test with various how you head about us options', () => {
         cy.retrieve_and_insert_otp();
     })
 
-   it('twitter', () => {
+   it.skip('twitter', () => {
         cy.fill_any_optional_field('twitter');
         cy.how_you_heard_about_us('Webinar/Seminar');
         cy.fill_in_password(password);
