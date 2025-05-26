@@ -6,6 +6,7 @@ import '../support/custom_commands/signupPage';
 import '../support/custom_commands/commonActions';
 import 'cypress-fill-command';
 import 'cypress-mailosaur';
+import 'cypress-mochawesome-reporter/register';
             
 beforeEach(() => {
     cy.on('uncaught:exception', () => { return false })
