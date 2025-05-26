@@ -25,7 +25,7 @@ describe('Sign up Test with various how you head about us options', () => {
         cy.retrieve_and_insert_otp()
     })
 
-    it.skip('Facebook', () => {
+    it('Facebook', () => {
         cy.how_you_heard_about_us('Facebook');
         cy.fill_in_password(password);
         cy.click_button('Sign Up');
@@ -33,7 +33,7 @@ describe('Sign up Test with various how you head about us options', () => {
         cy.retrieve_and_insert_otp()
     })
 
-    it.skip('Twitter', () => {
+    it('Twitter', () => {
         cy.how_you_heard_about_us('Twitter');
         cy.fill_in_password(password);
         cy.click_button('Sign Up');
@@ -41,7 +41,7 @@ describe('Sign up Test with various how you head about us options', () => {
         cy.retrieve_and_insert_otp()
     })
 
-    it.skip('Google Search', () => {
+    it('Google Search', () => {
         cy.how_you_heard_about_us('Google Search');
         cy.fill_in_password(password);
         cy.click_button('Sign Up');
@@ -49,7 +49,7 @@ describe('Sign up Test with various how you head about us options', () => {
         cy.retrieve_and_insert_otp()
     })
 
-    it.skip('Friends & Family', () => {
+    it('Friends & Family', () => {
         cy.how_you_heard_about_us('Friends & Family');
         cy.fill_in_password(password);
         cy.click_button('Sign Up');
@@ -57,7 +57,7 @@ describe('Sign up Test with various how you head about us options', () => {
         cy.retrieve_and_insert_otp()
     })
 
-    it.skip('Mima Sales Agent', () => {
+    it('Mima Sales Agent', () => {
         cy.how_you_heard_about_us('Mima Sales Agent');
         cy.fill_in_password(password);
         cy.click_button('Sign Up');
@@ -65,7 +65,7 @@ describe('Sign up Test with various how you head about us options', () => {
         cy.retrieve_and_insert_otp();
     })
 
-    it.skip('Others', () => {
+    it('Others', () => {
         cy.how_you_heard_about_us('Others');
         cy.fill_in_password(password);
         cy.click_button('Sign Up');
