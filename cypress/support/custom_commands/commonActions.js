@@ -1,7 +1,4 @@
 import { fakerEN_NG as faker } from '@faker-js/faker';
-import { JSDOM } from 'jsdom'
-import { html } from 'cheerio';
-import { min, max } from 'moment';
 
 let signup
 let login
